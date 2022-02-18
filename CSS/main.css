@@ -13,22 +13,22 @@
 .main .top-ball {
     grid-area: pott;
     width: 100%;
-    height: 100%;
-    background-image: url(../images/bg-pattern-top.svg);
+    height: 50%;
     background-size: cover;
     position: absolute;
     bottom: 50%;
     transform: rotate(180deg);
+    overflow: hidden;
 }
 
 .main .bottom-ball {
     grid-area: bott;
     width: 100%;
-    height: 100%;
-    background-image: url(../images/bg-pattern-bottom.svg);
+    height: 50%;
     background-size: cover;
     position: absolute;
     top: 50%;
+    overflow: hidden;
 }
 
 .card {
