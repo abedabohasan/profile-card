@@ -2,13 +2,37 @@
     width: 1440px;
     height: 100vh;
     background-color: hsl(185, 75%, 39%);
+    background-repeat: no-repeat;
     align-items: center;
     display: grid;
     grid-template-columns: repeat(8, 1fr);
-    grid-template-areas: ". . . card card . . .";
+    grid-template-areas: "pott pott pott card card bott bott bott";
+    position: relative;
+}
+
+.main .top-ball {
+    grid-area: pott;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/bg-pattern-top.svg);
+    background-size: cover;
+    position: absolute;
+    bottom: 50%;
+    transform: rotate(180deg);
+}
+
+.main .bottom-ball {
+    grid-area: bott;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/bg-pattern-bottom.svg);
+    background-size: cover;
+    position: absolute;
+    top: 50%;
 }
 
 .card {
+    position: absolute;
     grid-area: card;
     background-color: white;
     height: 50%;
@@ -30,8 +54,8 @@
 }
 
 .vector-background {
-    width: 100%;
-    height: 40%;
+    width: auto;
+    height: auto;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
 }
@@ -84,5 +108,12 @@ hr {
         width: 375px;
         grid-template-columns: 1fr;
         grid-template-areas: "card";
+    }
+
+    .bottom-ball {
+        top: 70%;
+    }
+    .top-ball {
+        bottom: 70%;
     }
 }
